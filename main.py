@@ -1,4 +1,4 @@
-from src import function
+import function
 import streamlit as st
 
 def input_contents():
