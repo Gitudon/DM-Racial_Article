@@ -1,4 +1,4 @@
-import function
+import func
 import streamlit as st
 
 def input_contents():
@@ -7,7 +7,7 @@ def input_contents():
     if select_races=="1":
         races.append(st.text_input("種族を入力"))
     elif select_races=="6以上":
-        return function.otoko(),[""],False
+        return func.otoko(),[""],False
     else:
         races.append(st.text_input("種族1つめを入力"))
     if select_races=="2":
@@ -25,12 +25,12 @@ def input_contents():
     return races,civils,evolution
 
 def main():
-    function.message()
+    func.message()
     races,civils,evolution=input_contents()
     if races==["男"]:
         article=races
     else:
-        article=function.generate_article(races,civils,evolution)
+        article=func.generate_article(races,civils,evolution)
     if st.button("冠詞を確認！"):
         for a in article:
             st.write(a)

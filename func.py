@@ -29,8 +29,8 @@ def explore_cards(article:str):
 
 def generate_article(races:list,civils:list,evolution:bool):
     article=hutei(races,civils,evolution)
-    if hutei!=[]:
-        return hutei
+    if article!=[]:
+        return article
     for race in races:
         if race in ignore_rules:
             return ignore_rules[race]
