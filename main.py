@@ -27,11 +27,11 @@ def input_contents():
 def main():
     func.message()
     races,civils,evolution=input_contents()
-    if races==["男"]:
-        article=races
-    else:
-        article=func.generate_article(races,civils,evolution)
     if st.button("冠詞を確認！"):
+        if races==["男"]:
+            article=races
+        else:
+            article=func.generate_article(races,civils,evolution)
         for a in article:
             st.write(a)
 
